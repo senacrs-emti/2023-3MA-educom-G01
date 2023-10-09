@@ -1,8 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Aluno/Downloads/2023-3MA-educom-G01/app/src/main/res/layout/activity_main.xml" value="0.13333333333333333" />
+        <entry key="..\:/xampp/htdocs/Teste-educom/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/xampp/htdocs/Teste-educom/app/src/main/res/layout/activity_main2.xml" value="0.22" />
       </map>
     </option>
   </component>

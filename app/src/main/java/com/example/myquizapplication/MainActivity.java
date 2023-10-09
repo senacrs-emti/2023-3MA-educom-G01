@@ -2,19 +2,23 @@ package com.example.myquizapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
-    TextView TotalQuestionsTextView;
+    TextView totalQuestionsTextView;
     TextView questionTextView;
     Button ansA, ansB, ansC, ansD;
     Button submitBtn;
 
-    ihnt score = 0;
+    int score = 0;
     int totalQuestions = QuestionAnswer.question.length;
-    int cuurentQuestionIndex = 0;
+    int currentQuestionIndex = 0;
     String selectedAnswer = "";
 
     @Override
@@ -39,38 +43,61 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         totalQuestionsTextView.setText("Total questions: " + totalQuestions);
 
         loadNewQuestion();
-
     }
 
     @Override
     public void onClick(View view){
-
-        ansA.setBackgroundColor(Color.White);
-        ansB.setBackgroundColor(Color.White);
-        ansC.setBackgroundColor(Color.White);
-        ansD.setBackgroundColor(Color.White);
+        ansA.setBackgroundColor(Color.WHITE);
+        ansB.setBackgroundColor(Color.WHITE);
+        ansC.setBackgroundColor(Color.WHITE);
+        ansD.setBackgroundColor(Color.WHITE);
 
         Button clickedButton = (Button) view;
         if(clickedButton.getId() == R.id.submit_btn){
-            cuurentQuestionIndex++;
-            loadNewQuestion();
             if(selectedAnswer.equals(QuestionAnswer.correctAnswers[currentQuestionIndex])){
                 score++;
             }
+            currentQuestionIndex++;
+            loadNewQuestion();
 
         }else{
             selectedAnswer = clickedButton.getText().toString();
             clickedButton.setBackgroundColor(Color.MAGENTA);
         }
-
     }
 
     void loadNewQuestion(){
-        questionTextView.setTextView(QuestionAnswer.question[curentQuestionIndex]);
-        ansA.setTec(QuestionAnswer.choices[currentQuestionIndex][0]);
-        ansB.setTec(QuestionAnswer.choices[currentQuestionIndex][1]);
-        ansC.setTec(QuestionAnswer.choices[currentQuestionIndex][2]);
-        ansD.setTec(QuestionAnswer.choices[currentQuestionIndex][3]);
+        if(currentQuestionIndex == totalQuestions){
+            finishQuiz();
+            return;
+        }
+
+        questionTextView.setText(QuestionAnswer.question[currentQuestionIndex]);
+        ansA.setText(QuestionAnswer.choices[currentQuestionIndex][0]);
+        ansB.setText(QuestionAnswer.choices[currentQuestionIndex][1]);
+        ansC.setText(QuestionAnswer.choices[currentQuestionIndex][2]);
+        ansD.setText(QuestionAnswer.choices[currentQuestionIndex][3]);
     }
 
+    void finishQuiz(){
+        String passStatus = "";
+        if(score > totalQuestions * 0.60){
+            passStatus = "Passed";
+        } else {
+            passStatus = "Failed";
+        }
+
+        new AlertDialog.Builder(this)
+                .setTitle(passStatus)
+                .setMessage("Score is " + score + " out of " + totalQuestions)
+                .setPositiveButton("Restart", (dialogInterface, i) -> restartQuiz())
+                .setCancelable(false)
+                .show();
+    }
+
+    void restartQuiz(){
+        score = 0;
+        currentQuestionIndex = 0;
+        loadNewQuestion();
+    }
 }
