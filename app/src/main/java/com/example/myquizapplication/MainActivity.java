@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         ansD.setOnClickListener(this);
         submitBtn.setOnClickListener(this);
 
-        totalQuestionsTextView.setText("Total questions: " + totalQuestions);
+        totalQuestionsTextView.setText("Total de perguntas: " + totalQuestions);
 
         loadNewQuestion();
     }
@@ -82,15 +82,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     void finishQuiz(){
         String passStatus = "";
         if(score > totalQuestions * 0.60){
-            passStatus = "Passed";
+            passStatus = "Acertou a maioria!";
         } else {
-            passStatus = "Failed";
+            passStatus = "Errou!";
         }
 
         new AlertDialog.Builder(this)
                 .setTitle(passStatus)
-                .setMessage("Score is " + score + " out of " + totalQuestions)
-                .setPositiveButton("Restart", (dialogInterface, i) -> restartQuiz())
+                .setMessage("Sua pontuação é de: " + score + " do total de:  " + totalQuestions)
+                .setPositiveButton("Reiniciar", (dialogInterface, i) -> restartQuiz())
                 .setCancelable(false)
                 .show();
     }
