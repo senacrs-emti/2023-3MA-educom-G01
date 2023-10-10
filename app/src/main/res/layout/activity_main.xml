@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/teal_200"
+    android:background="@color/white"
     android:padding="24dp"
     tools:context=".MainActivity">
 
@@ -115,6 +115,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/choices_layout"
         android:text="Enviar"
+        android:backgroundTint="@color/red"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.809"
