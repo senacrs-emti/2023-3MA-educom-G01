@@ -10,13 +10,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class Medio extends AppCompatActivity implements View.OnClickListener{
+public class Dificil extends AppCompatActivity implements View.OnClickListener{
 
     TextView totalQuestionsTextView;
     TextView questionTextView;
     Button ansA, ansB, ansC, ansD;
     Button submitBtn;
-    Button btnProximo;
 
     int score = 0;
     int totalQuestions = QuestionAnswer.question.length;
@@ -90,18 +89,9 @@ public class Medio extends AppCompatActivity implements View.OnClickListener{
         }
 
         new AlertDialog.Builder(this)
-            .setTitle(passStatus)
-            .setMessage("Sua pontuação é de: " + score + " do total de:  " + totalQuestions)
-            .setPositiveButton("Reiniciar", (dialogInterface, i) -> restartQuiz());
-
-            btnProximo = findViewById(R.id.btnProximo);
-            btnProximo.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Intent perguntasDificil = new Intent(getApplicationContext(), Dificil.class);
-                    startActivity(perguntasDificil);
-                }
-            });
+                .setTitle(passStatus)
+                .setMessage("Sua pontuação é de: " + score + " do total de:  " + totalQuestions)
+                .setPositiveButton("Reiniciar", (dialogInterface, i) -> restartQuiz());
 
  /*
                 .setCancelable(false)

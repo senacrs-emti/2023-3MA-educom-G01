@@ -92,19 +92,21 @@ public class Perguntas extends AppCompatActivity implements View.OnClickListener
         new AlertDialog.Builder(this)
                 .setTitle(passStatus)
                 .setMessage("Sua pontuação é de: " + score + " do total de:  " + totalQuestions)
-                .setPositiveButton("Reiniciar", (dialogInterface, i) -> restartQuiz())
-                .setNegativeButton("Cancelar", (dialogInterface, i) -> {
-                    btnProximo = findViewById(R.id.btnProximo);
-                    btnProximo.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View view) {
-                            Intent perguntasMedio = new Intent(getApplicationContext(), Medio.class);
-                            startActivity(perguntasMedio);
-                        }
-                    });
-                })
+                .setPositiveButton("Reiniciar", (dialogInterface, i) -> restartQuiz());
+
+                btnProximo = findViewById(R.id.btnProximo);
+                btnProximo.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent perguntasMedio = new Intent(getApplicationContext(), Medio.class);
+                        startActivity(perguntasMedio);
+                    }
+                });
+/*
                 .setCancelable(false)
                 .show();
+
+ */
     }
 
     void restartQuiz(){

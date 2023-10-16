@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.myquizapplication" >
+    package="com.example.myquizapplication">
 
     <application
         android:allowBackup="true"
@@ -12,7 +12,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyQuizApplication"
-        tools:targetApi="31" >
+        tools:targetApi="31">
+        <activity
+            android:name=".QuestionAnswerDificil"
+            android:exported="false" />
+        <activity
+            android:name=".Dificil"
+            android:exported="false" />
+        <activity
+            android:name=".QuestionAnswerMedio"
+            android:exported="false" />
+        <activity
+            android:name=".PerguntasMedias"
+            android:exported="false" />
         <activity
             android:name=".Menu2Activity"
             android:exported="false" />
@@ -20,11 +32,8 @@
             android:name=".Medio"
             android:exported="false" />
         <activity
-            android:name=".Menu"
-            android:exported="false" />
-        <activity
             android:name=".Perguntas"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
