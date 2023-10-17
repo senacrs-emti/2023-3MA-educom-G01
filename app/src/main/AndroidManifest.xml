@@ -14,16 +14,13 @@
         android:theme="@style/Theme.MyQuizApplication"
         tools:targetApi="31">
         <activity
+            android:name=".QuestionAnswerMedio"
+            android:exported="false" />
+        <activity
             android:name=".QuestionAnswerDificil"
             android:exported="false" />
         <activity
             android:name=".Dificil"
-            android:exported="false" />
-        <activity
-            android:name=".QuestionAnswerMedio"
-            android:exported="false" />
-        <activity
-            android:name=".PerguntasMedias"
             android:exported="false" />
         <activity
             android:name=".Menu2Activity"

@@ -1,14 +1,15 @@
-package com.example.myquizapplication;
 
-import androidx.appcompat.app.AppCompatActivity;
+        package com.example.myquizapplication;
 
-import android.app.AlertDialog;
-import android.content.Intent;
-import android.graphics.Color;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
+        import androidx.appcompat.app.AppCompatActivity;
+
+        import android.app.AlertDialog;
+        import android.content.Intent;
+        import android.graphics.Color;
+        import android.os.Bundle;
+        import android.view.View;
+        import android.widget.Button;
+        import android.widget.TextView;
 
 public class Dificil extends AppCompatActivity implements View.OnClickListener{
 

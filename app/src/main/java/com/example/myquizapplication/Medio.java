@@ -90,24 +90,21 @@ public class Medio extends AppCompatActivity implements View.OnClickListener{
         }
 
         new AlertDialog.Builder(this)
-            .setTitle(passStatus)
-            .setMessage("Sua pontuação é de: " + score + " do total de:  " + totalQuestions)
-            .setPositiveButton("Reiniciar", (dialogInterface, i) -> restartQuiz());
-
-            btnProximo = findViewById(R.id.btnProximo);
-            btnProximo.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Intent perguntasDificil = new Intent(getApplicationContext(), Dificil.class);
-                    startActivity(perguntasDificil);
-                }
-            });
-
- /*
+                .setTitle(passStatus)
+                .setMessage("Sua pontuação é de: " + score + " do total de:  " + totalQuestions)
+                .setPositiveButton("Reiniciar", (dialogInterface, i) -> restartQuiz());
+                btnProximo = findViewById(R.id.btnProximo);
+                btnProximo.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent perguntasDificil = new Intent(getApplicationContext(), Dificil.class);
+                        startActivity(perguntasDificil);
+                    }
+                });
+                /*
                 .setCancelable(false)
                 .show();
-
-  */
+                 */
     }
 
     void restartQuiz(){
