@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class Facil extends AppCompatActivity implements View.OnClickListener{
+public class Dificil extends AppCompatActivity implements View.OnClickListener{
 
     TextView totalQuestionsTextView;
     TextView questionTextView;
@@ -17,7 +17,7 @@ public class Facil extends AppCompatActivity implements View.OnClickListener{
     Button submitBtn;
 
     int score = 0;
-    int totalQuestion = PerguntaFacil.question.length;
+    int totalQuestion = PerguntaDificil.question.length;
     int currentQuestionIndex = 0;
     String selectedAnswer = "";
 
@@ -56,7 +56,7 @@ public class Facil extends AppCompatActivity implements View.OnClickListener{
 
         Button clickedButton = (Button) view;
         if(clickedButton.getId()==R.id.submit_btn){
-            if (selectedAnswer.equals(PerguntaFacil.correctAnswer[currentQuestionIndex])){
+            if (selectedAnswer.equals(PerguntaDificil.correctAnswer[currentQuestionIndex])){
                 score++;
             }
             currentQuestionIndex++;
@@ -75,11 +75,11 @@ public class Facil extends AppCompatActivity implements View.OnClickListener{
             return;
         }
 
-        questionTextView.setText(PerguntaFacil.question[currentQuestionIndex]);
-        ansA.setText(PerguntaFacil.choices[currentQuestionIndex][0]);
-        ansB.setText(PerguntaFacil.choices[currentQuestionIndex][1]);
-        ansC.setText(PerguntaFacil.choices[currentQuestionIndex][2]);
-        ansD.setText(PerguntaFacil.choices[currentQuestionIndex][3]);
+        questionTextView.setText(PerguntaDificil.question[currentQuestionIndex]);
+        ansA.setText(PerguntaDificil.choices[currentQuestionIndex][0]);
+        ansB.setText(PerguntaDificil.choices[currentQuestionIndex][1]);
+        ansC.setText(PerguntaDificil.choices[currentQuestionIndex][2]);
+        ansD.setText(PerguntaDificil.choices[currentQuestionIndex][3]);
     }
 
     void finishQuiz(){
@@ -94,9 +94,9 @@ public class Facil extends AppCompatActivity implements View.OnClickListener{
                 .setTitle(passStatus)
                 .setMessage("Sua pontuacao foi de: " + score)
                 .setPositiveButton( "Restart", (dialogInterface, i) -> restartQuiz() )
-                .setNeutralButton("Próxima Fase", (dialogInterface, i) -> {
-                    Intent medio = new Intent(this, Medio.class);
-                    startActivity(medio);
+                .setNeutralButton("Finalizar Quiz", (dialogInterface, i) -> {
+                    Intent finalizar= new Intent(this, Comeco.class);
+                    startActivity(finalizar);
                 })
                 .setCancelable(false)
                 .show();

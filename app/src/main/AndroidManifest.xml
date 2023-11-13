@@ -14,17 +14,24 @@
         android:theme="@style/Theme.EduConn"
         tools:targetApi="31">
         <activity
+            android:name=".Comeco"
+            android:exported="false">
+        </activity>
+        <activity
+            android:name=".Dificil"
+            android:exported="false" />
+        <activity
             android:name=".Medio"
             android:exported="false" />
         <activity
             android:name=".Facil"
-            android:exported="false" />
+            android:exported="false">
+        </activity>
         <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
