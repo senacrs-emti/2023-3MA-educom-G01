@@ -19,10 +19,10 @@ public class PerguntaFacil {
 
     public static String correctAnswer[] = {
             "4",
-            "10",
+            "8",
             "2",
-            "4",
             "6",
+            "3",
             "24",
             "3",
             "7"

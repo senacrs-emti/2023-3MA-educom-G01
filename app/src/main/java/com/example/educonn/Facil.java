@@ -40,6 +40,7 @@ public class Facil extends AppCompatActivity implements View.OnClickListener{
         ansD.setOnClickListener(this);
         submitBtn.setOnClickListener(this);
 
+
         totalQuestionsTextView.setText("Total de questoes: " + totalQuestion);
 
         loadNewQuestion();
@@ -47,6 +48,7 @@ public class Facil extends AppCompatActivity implements View.OnClickListener{
     }
 
     @Override
+
     public void onClick(View view) {
 
         ansA.setBackgroundColor(Color.WHITE);
