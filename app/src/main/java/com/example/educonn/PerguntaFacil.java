@@ -19,12 +19,8 @@ public class PerguntaFacil {
 
     public static String correctAnswer[] = {
             "4",
-            "8",
             "2",
             "6",
-            "3",
-            "24",
-            "3",
-            "7"
+            "3"
     };
 }

@@ -66,7 +66,7 @@ public class Facil extends AppCompatActivity implements View.OnClickListener{
 
         }else{
             selectedAnswer = clickedButton.getText().toString();
-            clickedButton.setBackgroundColor(Color.MAGENTA);
+            clickedButton.setBackgroundColor(Color.RED);
         }
     }
 
