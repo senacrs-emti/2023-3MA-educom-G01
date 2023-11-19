@@ -44,7 +44,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/ans_A"
             android:layout_margin="5dp"
-            android:backgroundTint="@color/white"
+
             android:text="Ans A"
             android:textColor="@color/black"
             />
@@ -54,7 +54,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/ans_B"
             android:layout_margin="5dp"
-            android:backgroundTint="@color/white"
+
             android:text="Ans B"
             android:textColor="@color/black"
             />
@@ -64,7 +64,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/ans_C"
             android:layout_margin="5dp"
-            android:backgroundTint="@color/white"
+
             android:text="Ans C"
             android:textColor="@color/black"
             />
@@ -74,7 +74,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/ans_D"
             android:layout_margin="5dp"
-            android:backgroundTint="@color/white"
+
             android:text="Ans D"
             android:textColor="@color/black"
             />

@@ -41,6 +41,7 @@ public class Facil extends AppCompatActivity implements View.OnClickListener{
         submitBtn.setOnClickListener(this);
 
 
+
         totalQuestionsTextView.setText("Total de questoes: " + totalQuestion);
 
         loadNewQuestion();
@@ -50,11 +51,11 @@ public class Facil extends AppCompatActivity implements View.OnClickListener{
     @Override
 
     public void onClick(View view) {
-
         ansA.setBackgroundColor(Color.WHITE);
         ansB.setBackgroundColor(Color.WHITE);
         ansC.setBackgroundColor(Color.WHITE);
         ansD.setBackgroundColor(Color.WHITE);
+
 
         Button clickedButton = (Button) view;
         if(clickedButton.getId()==R.id.submit_btn){
@@ -66,7 +67,7 @@ public class Facil extends AppCompatActivity implements View.OnClickListener{
 
         }else{
             selectedAnswer = clickedButton.getText().toString();
-            clickedButton.setBackgroundColor(Color.RED);
+            clickedButton.setBackgroundColor(R.drawable.btn_margenta);
         }
     }
 
