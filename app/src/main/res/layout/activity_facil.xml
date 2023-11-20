@@ -8,13 +8,15 @@
 
 
     <TextView
+        android:id="@+id/total_question"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/total_question"
-        android:text="Total de Questões"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
+        android:layout_marginBottom="565dp"
+        android:text="total de questões"
         android:textSize="20dp"
-        />
+        tools:text="Total de Questões" />
 
     <TextView
         android:id="@+id/question"
@@ -82,13 +84,13 @@
     </LinearLayout>
 
     <Button
+        android:id="@+id/submit_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/submit_btn"
-        android:text="Próximo"
         android:layout_below="@id/choices_layout"
         android:layout_marginTop="40dp"
-        />
+        android:backgroundTint="#ED8CFF"
+        android:text="Próximo" />
 
 
 </RelativeLayout>

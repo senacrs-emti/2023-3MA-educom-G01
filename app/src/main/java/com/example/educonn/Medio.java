@@ -40,7 +40,7 @@ public class Medio extends AppCompatActivity implements View.OnClickListener{
         ansD.setOnClickListener(this);
         submitBtn.setOnClickListener(this);
 
-        totalQuestionsTextView.setText("Total de questoes: " + totalQuestion);
+        totalQuestionsTextView.setText("Total de questões: " + totalQuestion);
 
         loadNewQuestion();
 

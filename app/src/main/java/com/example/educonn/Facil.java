@@ -42,7 +42,7 @@ public class Facil extends AppCompatActivity implements View.OnClickListener{
 
 
 
-        totalQuestionsTextView.setText("Total de questoes: " + totalQuestion);
+        totalQuestionsTextView.setText("Total de questões: " + totalQuestion);
 
         loadNewQuestion();
 
@@ -67,7 +67,7 @@ public class Facil extends AppCompatActivity implements View.OnClickListener{
 
         }else{
             selectedAnswer = clickedButton.getText().toString();
-            clickedButton.setBackgroundColor(R.drawable.btn_margenta);
+            clickedButton.setBackgroundColor(Color.MAGENTA);
         }
     }
 
