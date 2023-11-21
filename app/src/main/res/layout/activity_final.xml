@@ -8,26 +8,39 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="319dp"
-        android:layout_height="133dp"
-        android:text="Parabéns, você terminou o nosso quiz! Obrigada por fazer!"
+        android:layout_width="286dp"
+        android:layout_height="140dp"
+        android:text="Parabéns, você concluiu o quizma!!!"
+        android:textColor="@color/gray"
         android:textSize="25dp"
-        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.128" />
+        app:layout_constraintVertical_bias="0.219" />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="317dp"
-        android:layout_height="298dp"
+        android:layout_width="242dp"
+        android:layout_height="297dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.695"
-        app:srcCompat="@drawable/_17cb6d3" />
+        app:layout_constraintVertical_bias="0.483"
+        app:srcCompat="@drawable/trofeu" />
+
+    <Button
+        android:id="@+id/btnRecomeca"
+        android:layout_width="189dp"
+        android:layout_height="66dp"
+        android:backgroundTint="#ED8CFF"
+        android:text="Recomeçar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.801" />
+
 </android.support.constraint.ConstraintLayout>
